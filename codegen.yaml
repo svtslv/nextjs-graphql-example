@@ -1,0 +1,18 @@
+overwrite: true
+schema: "http://localhost:3020/graphql"
+documents:
+  - "src/**/*.{tsx,ts}"
+generates:
+  src/__generated__/GTypes.d.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - add:
+          placement: 'prepend'
+          content:
+            - 'declare namespace GTypes {'
+      - add:
+          placement: 'append'
+          content: '}'
+    config:
+      dedupeOperationSuffix: true

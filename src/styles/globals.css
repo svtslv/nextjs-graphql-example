@@ -1,0 +1,11 @@
+/*noinspection CssInvalidAtRule*/
+@tailwind base;
+/*noinspection CssInvalidAtRule*/
+@tailwind components;
+/*noinspection CssInvalidAtRule*/
+@tailwind utilities;
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  vertical-align: baseline;
+}
